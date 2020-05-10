@@ -214,13 +214,13 @@ class PlanningGraph:
         -----
         WARNING: you should expect long runtimes using this heuristic on complex problems
         """
-        def AllGoalSeen(layer):
+        def All_goal(layer):
             for goal in self.goal:
                 if goal not in layer:
                     return False
             return True
             
-        def NoMutex(layer):
+        def No_mutex(layer):
             for g1, g2 in combinations(self.goal, 2):
                 if layer.is_mutex(g1, g2):
                     return False
@@ -229,7 +229,7 @@ class PlanningGraph:
         level_count = 0
         while not self._is_leveled:
             layer = self.literal_layers[-1] #last layer
-            if AllGoalSeen(layer) and NoMutex(layer):
+            if All_goal(layer) and No_mutex(layer):
                 return level_count
             self._extend()
             level_count += 1

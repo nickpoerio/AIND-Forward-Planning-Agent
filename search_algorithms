@@ -1,0 +1,11 @@
+1. breadth_first_search 
+2. depth_first_graph_search 
+3. uniform_cost_search 
+4. greedy_best_first_graph_search h_unmet_goals
+5. greedy_best_first_graph_search h_pg_levelsum
+6. greedy_best_first_graph_search h_pg_maxlevel
+7. greedy_best_first_graph_search h_pg_setlevel
+8. astar_search h_unmet_goals
+9. astar_search h_pg_levelsum
+10. astar_search h_pg_maxlevel
+11. astar_search h_pg_setlevel
